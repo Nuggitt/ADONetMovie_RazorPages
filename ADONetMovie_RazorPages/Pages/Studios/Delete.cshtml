@@ -1,0 +1,48 @@
+﻿@page
+@model ADONetMovie_RazorPages.Pages.Studios.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Studio</h4>
+    <hr />
+    <form method="post">
+        <dl class="row">
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Studio.Id)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Studio.Id)
+
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Studio.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Studio.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Studio.Hqcity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Studio.Hqcity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Studio.NoOfEmployees)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Studio.NoOfEmployees)
+            </dd>
+        </dl>
+
+
+        <input type="hidden" asp-for="Studio.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-page="/Studios/GetStudios">Back to List</a>
+    </form>
+</div>
